@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  dummy:
+    build:
+      context: ./dummy
+      dockerfile: ./dummy/Dockerfile
